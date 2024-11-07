@@ -1,0 +1,123 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: linear-gradient(to bottom right, #546fff, #8be1fd);
+}
+.container{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container .card-Hero{
+    position: relative;
+    width: 600px;
+    height: 350px;
+    margin: 20px;
+    display: flex;
+    transition: 0.5s;
+    justify-content: flex-start;
+    align-items: center;
+    background: linear-gradient(89deg, #000, #064c67);
+    border-radius: 15px;
+}
+.container .card-Hero img{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 400px;
+    transition: 0.5s;
+}
+.container .card-Hero:hover img{
+    left: 73%;
+    height: 500px;
+}
+.container .card-Hero .content-Hero{
+    position: relative;
+    width: 50%;
+    left: 20%;
+    padding: 20px 20px 20px 40px;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s;
+}
+.container .card-Hero:hover .content-Hero{
+    left: 0;
+    opacity: 1;
+    visibility: visible;
+}
+.container .card-Hero .content-Hero h2{
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 30px;
+    line-height: 1.2em;
+}
+.container .card-Hero .content-Hero p{
+    color: #fff;
+    margin: 6px 0 5px 0;
+}
+.container .card-Hero .content-Hero a{
+    position: relative;
+    color: #111;
+    background: #fff;
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 10px;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 5px;
+}
+
+@media (max-width: 991px) {
+    .container .card-Hero{
+        width: auto;
+        max-width: 600px;
+        align-items: flex-start;
+    }
+    .container .card-Hero:hover{
+        height: 600px;
+    }
+    .container .card-Hero:hover img{
+        left: 50%;
+        height: 350px;
+    }
+    .container .card-Hero .content-Hero{
+        width: 100%;
+        left: 0;
+        padding: 40px;
+    }
+}
+
+@media (max-width: 767px){
+    .container{
+        flex-direction: column;
+    }
+    .container .card-Hero{
+        margin: 40px 20px;
+    }
+}
+
+@media (max-width: 420px){
+
+    .container .card-Hero .content-Hero{
+        padding: 30px;
+    }
+    .container .card-Hero:hover img{
+        height: 300px;
+    }
+}
+
+@media (max-width: 330px){
+    .container .card-Hero:hover{
+        height: 640px;
+    }
+}
