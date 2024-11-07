@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS clip-path 视频幻灯片效果</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="box box1">
+            <video src="bg1.mp4" autoplay loop muted></video>
+            <div class="content">
+                <h2>Slide One</h2>
+            </div>
+        </div>
+        <div class="box box2">
+            <video src="bg2.mp4" autoplay loop muted></video>
+            <div class="content">
+                <h2>Slide Tow</h2>
+            </div>
+        </div>
+        <div class="box box3">
+            <video src="bg3.mp4" autoplay loop muted></video>
+            <div class="content">
+                <h2>Slide Three</h2>
+            </div>
+        </div>
+    </div>
+    <script>
+        let box = document.querySelectorAll('.box');
+        box.forEach(popup => popup.addEventListener('click', () => {
+            popup.classList.toggle('active');
+        }))
+    </script>
+</body>
+</html>
